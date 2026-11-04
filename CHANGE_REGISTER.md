@@ -87,13 +87,15 @@ Date: 2026-11-04
 
 
 ### RC-CHG-0007
-- Status: LOGGED BEFORE USER ACTION
+- Status: COMPLETED - SCREENSHOT VERIFIED
 - Request: Diagnose why the user reported that the script was not visible as a component on XR Origin.
-- Scope: Screenshot inspection shows `Minimal Tabletop Demo (Script)` attached more than once to XR Origin. Remove duplicate copies and retain exactly one enabled component.
-- Files in scope: The local Unity scene only; no source-code edits.
-- Preserved functions: Preserve the existing XR Origin and all template components. Preserve one enabled MinimalTabletopDemo component with its default settings.
-- Checks planned: User confirms one component remains visible in the Inspector and the Console has no red compile errors.
-- Version transition: 0.9 -> 1.0 (cleanup logged; not yet performed).
+- Scope: Screenshot inspection showed `Minimal Tabletop Demo (Script)` attached more than once to XR Origin. Retain exactly one enabled component.
+- Files: User removed the duplicate component from the local Unity scene. No source files or repository source files changed.
+- Preserved functions: Existing XR Origin, template components and one enabled MinimalTabletopDemo component with default settings preserved.
+- Checks: Latest screenshot inspected; exactly one `Minimal Tabletop Demo (Script)` component is visible on XR Origin.
+- Tests: Unity compilation, Android build, Quest deployment and runtime driving remain untested. Console status not shown in this screenshot.
+- Issues: None observed in the Inspector. Compile status remains unverified.
+- Version transition: 0.9 -> 1.0.
 
 ## Version history
 - 0.1: Initial governance baseline.
