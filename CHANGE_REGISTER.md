@@ -1,6 +1,6 @@
 # Change Register
 Project: Meta Quest 3 Mixed Reality RC Racing
-Version: 0.5
+Version: 0.7
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -52,9 +52,33 @@ Date: 2026-11-04
 - Checks planned: User confirms Unity Hub creation completes without errors; then inspect project structure and record what was actually generated. No build or headset test is implied.
 - Version transition: 0.4 -> 0.5 (creation action logged; completion pending).
 
+
+
+### RC-CHG-0005
+- Status: COMPLETED - USER CONFIRMED
+- Request: Create the local Unity project after the user selected a project location in Unity Hub.
+- Scope: User created a project named RC Buggy MR Racing using Unity 6.3 LTS (6000.3.26f1) and the Mixed Reality (MR) template.
+- Files: Unity generated the local project at the location selected in Unity Hub. Exact path and generated file inventory have not been captured. No Unity implementation files were added to the GitHub repository.
+- Preserved functions: No application functions existed before this step. All FIXED requirements and existing project scope remain unchanged.
+- Checks: Screenshot visually confirms the Unity Editor opened with the project and Mixed Reality template scene. This is not a full file-system audit.
+- Tests: No build, compile validation, Quest deployment, headset test or runtime gameplay test performed.
+- Issues: Exact local project path and generated file inventory remain unverified.
+- Version transition: 0.5 -> 0.6.
+
+### RC-CHG-0006
+- Status: LOGGED BEFORE IMPLEMENTATION
+- Request: Use a tabletop track and make the simplest possible prototype so it can be tested.
+- Scope: Fix tabletop as the initial track surface and define the first test build as a minimal playable mixed-reality demonstration: retain the existing Mixed Reality template XR foundation; use a simple placeholder buggy with basic Rigidbody movement and steering; provide a small simple tabletop track or test area; prioritise getting a build onto Meta Quest 3 for an initial passthrough and driving test.
+- Explicit exclusions: No AI opponents, polished buggy model, race progression, lap system, menus, audio, multiplayer, advanced vehicle simulation or extra packages in this change.
+- Files in scope: PROJECT_SPEC.md, CHANGE_REGISTER.md, MANIFEST.md and the minimum local Unity scene/scripts/assets strictly necessary for this test prototype. Do not replace or unnecessarily modify the template XR setup.
+- Preserved functions: Carry forward all existing Mixed Reality template objects and settings unless a specific incompatibility is found and approved. Preserve FIXED project requirements.
+- Checks planned: Inspect created scripts and scene setup; compile in Unity; attempt Android build and Quest test only when user confirms headset connection and build access. Distinguish any checks not run.
+- Version transition: 0.6 -> 0.7 (change logged; implementation not yet started).
+
 ## Version history
 - 0.1: Initial governance baseline.
 - 0.2: Installed Unity Editor versions recorded.
 - 0.3: Android modules confirmed for Unity 6.3 LTS.
 - 0.4: Unity 6.3 LTS fixed as project editor.
 - 0.5: RC-CHG-0005 logs initial local Unity project creation; completion pending.
+- 0.6: RC-CHG-0005 completed after screenshot confirmation; RC-CHG-0006 logs the tabletop minimum-test prototype before implementation.
