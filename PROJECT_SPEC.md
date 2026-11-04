@@ -1,6 +1,6 @@
 # Meta Quest 3 Mixed Reality RC Racing
 Project Specification
-Version: 0.2
+Version: 0.3
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -27,8 +27,7 @@ Create a rapid, playable proof-of-concept mixed reality RC buggy racing experien
 
 ### UNRESOLVED
 - Track placement surface: table or floor.
-- Unity Editor selection for this project. Installed versions reported: Unity 6.6 (6000.6.6f1) at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.6.6f1\\Editor\\Unity.exe`, and Unity 6.3 LTS (6000.3.26f1) at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.26f1\\Editor\\Unity.exe`.
-- Whether Android Build Support, Android SDK/NDK tools and OpenJDK are installed for either editor.
+- Unity Editor selection for this project. Installed versions reported: Unity 6.6 (6000.6.6f1) at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.6.6f1\\Editor\\Unity.exe`, and Unity 6.3 LTS (6000.3.26f1) at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.26f1\\Editor\\Unity.exe`. Android Build Support, Android SDK & NDK Tools, and OpenJDK have been installed for Unity 6.3 LTS, as confirmed by the user. Installation for Unity 6.6 has not been confirmed.
 - Exact controller mapping and driving camera/view.
 - Track dimensions, buggy scale and race format.
 - Whether the first demonstration needs sound, menus, start lights or a reset/reposition interaction.
@@ -63,4 +62,5 @@ All changes must be recorded in CHANGE_REGISTER.md before editing. Version and m
 
 ## Version history
 - 0.1: Initial governance and requirements baseline.
-- 0.2: Recorded installed Unity Editor versions; editor selection and Android build module availability remain unresolved.
+- 0.2: Recorded installed Unity Editor versions; editor selection and Android build module availability remained unresolved.
+- 0.3: Recorded user-confirmed Android development module installation for Unity 6.3 LTS; editor selection remains unresolved.
