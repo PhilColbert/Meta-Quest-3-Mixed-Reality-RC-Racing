@@ -1,6 +1,6 @@
 # Change Register
 Project: Meta Quest 3 Mixed Reality RC Racing
-Version: 0.8
+Version: 0.9
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -77,6 +77,12 @@ Date: 2026-11-04
 - Implementation step 1 authorised by user: add one self-contained script at `Assets/Scripts/MinimalTabletopDemo.cs`. It will generate a small tabletop test board, simple primitive buggy and cones at runtime; use Unity XR device input (left primary joystick for steering, right trigger for throttle, left trigger for brake) and Rigidbody movement. It will not modify the existing XR rig, add packages, or create race/AI features.
 - Placement limitation for this first script: place the test board at a fixed offset in front of the headset camera, approximately table height; no plane detection or hand/controller placement is included.
 - User instruction: proceed with the simplest test project.
+- Implementation step 1 result: created `Assets/Scripts/MinimalTabletopDemo.cs` in the repository. Git blob SHA: `0cfb4dfb2d3be07efc700346ca1ed7ebaa9de1ea`.
+- Script behaviour: generates a small board, low perimeter rails, four orange markers and a blue primitive buggy at runtime relative to the headset camera; reads XR left-hand primary 2D axis for steering, right trigger for acceleration and left trigger for braking; applies basic Rigidbody force and yaw torque.
+- Files changed in this step: `Assets/Scripts/MinimalTabletopDemo.cs` created in GitHub. No local Unity project files have been edited or imported yet.
+- Preserved functions: Existing Mixed Reality template scene and XR objects untouched; no packages added.
+- Checks: Source file fetched back from GitHub and content length verified (8,351 characters). Code has not been compiled in Unity. No Android build, Quest deployment or runtime test performed.
+- Known limitation: The board is positioned at a fixed offset relative to the headset camera and approximates tabletop height; it does not detect the physical table or support repositioning. Physical alignment and controller input mapping must be tested on device.
 
 ## Version history
 - 0.1: Initial governance baseline.
