@@ -28,7 +28,7 @@ None. No Unity project, source code, assets, packages or build configuration hav
 - Repository identity and permissions verified through GitHub; default branch main; push and admin permissions confirmed.
 - RC-CHG-0003 was recorded in CHANGE_REGISTER.md before editing PROJECT_SPEC.md.
 - User confirmed installation of Android Build Support, Android SDK & NDK Tools, and OpenJDK for Unity 6.3 LTS (6000.3.26f1).
-- PROJECT_SPEC.md and CHANGE_REGISTER.md were updated for version 0.3; final fetch verification is pending.
+- All three governance files were fetched successfully after saving and their version 0.3 contents verified. The resulting MANIFEST.md blob SHA is recorded in the completion report; its own hash is intentionally not embedded here.
 - No Unity build, editor validation, headset test or runtime test has been performed.
 - This is a development governance baseline, not an approved playable release.
 
