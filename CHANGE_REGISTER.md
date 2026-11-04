@@ -19,5 +19,16 @@ Date: 2026-11-04
 - Version transition: 0.0 (empty repository) -> 0.1 (initial governance baseline).
 - Next step: Confirm Unity Editor version and Android build support, then resolve the minimum prototype choices before implementation.
 
+### RC-CHG-0002
+- Status: LOGGED BEFORE EDIT
+- Request: Record the user's installed Unity Editor versions supplied while continuing project setup.
+- Scope: Update PROJECT_SPEC.md with the two installed editor versions and executable paths; keep editor selection and Android build module availability UNRESOLVED. Update this register and MANIFEST.md to project version 0.2.
+- Explicit exclusions: No Unity editor selection, project creation, packages, source code, assets or implementation.
+- Files in scope: PROJECT_SPEC.md, CHANGE_REGISTER.md, MANIFEST.md.
+- Preserved functions: No application functions exist yet. All existing project requirements and scope are to be preserved.
+- Checks planned: Fetch and verify all three updated records and their Git blob SHAs after saving.
+- Version transition: 0.1 -> 0.2.
+
 ## Version history
 - 0.1: Initial project specification, change register and release manifest created. No application source created.
+- 0.2: RC-CHG-0002 records the installed Unity Editor versions; editor selection and Android module availability remain unresolved.
