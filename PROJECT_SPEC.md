@@ -1,6 +1,6 @@
 # Meta Quest 3 Mixed Reality RC Racing
 Project Specification
-Version: 0.3
+Version: 0.4
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -15,6 +15,8 @@ Create a rapid, playable proof-of-concept mixed reality RC buggy racing experien
 - Vehicle concept: realistic-looking remote-control buggy, not a slot car.
 - Driving: player must be able to steer and control the buggy freely. The vehicle must not be constrained to a rail or fixed path.
 - Prototype priority: quickest practical route to a playable concept demonstration.
+- Unity Editor: Unity 6.3 LTS (6000.3.26f1), installed at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.26f1\\Editor\\Unity.exe`.
+- Android Build Support, Android SDK & NDK Tools, and OpenJDK are installed for the selected Unity 6.3 LTS editor, as confirmed by the user.
 
 ### PROPOSED (not yet approved as final implementation details)
 - Engine and toolchain: Unity.
@@ -27,10 +29,10 @@ Create a rapid, playable proof-of-concept mixed reality RC buggy racing experien
 
 ### UNRESOLVED
 - Track placement surface: table or floor.
-- Unity Editor selection for this project. Installed versions reported: Unity 6.6 (6000.6.6f1) at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.6.6f1\\Editor\\Unity.exe`, and Unity 6.3 LTS (6000.3.26f1) at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.26f1\\Editor\\Unity.exe`. Android Build Support, Android SDK & NDK Tools, and OpenJDK have been installed for Unity 6.3 LTS, as confirmed by the user. Installation for Unity 6.6 has not been confirmed.
 - Exact controller mapping and driving camera/view.
 - Track dimensions, buggy scale and race format.
 - Whether the first demonstration needs sound, menus, start lights or a reset/reposition interaction.
+- Installation of Android build modules for Unity 6.6 is unconfirmed; this is not required for the selected editor.
 
 ## 3. Scope boundary for first proof of concept
 The first milestone is a simple end-to-end demonstration: enter passthrough, place or position a small track, drive a free-steering buggy, and observe at least one AI vehicle navigating the course. Further features require a logged change and approval.
@@ -44,7 +46,7 @@ The first milestone is a simple end-to-end demonstration: enter passthrough, pla
 ## 5. Technical constraints
 - Target hardware is Meta Quest 3.
 - Prioritise a short build path and a reliable on-device demonstration.
-- Confirm Android build support and the selected editor version before creating implementation files.
+- Selected editor is Unity 6.3 LTS (6000.3.26f1), with Android Build Support, Android SDK & NDK Tools and OpenJDK confirmed installed by the user.
 - Do not assume unconfirmed Unity packages, APIs or SDK versions.
 
 ## 6. Acceptance criteria for the initial prototype (PROPOSED)
@@ -63,4 +65,5 @@ All changes must be recorded in CHANGE_REGISTER.md before editing. Version and m
 ## Version history
 - 0.1: Initial governance and requirements baseline.
 - 0.2: Recorded installed Unity Editor versions; editor selection and Android build module availability remained unresolved.
-- 0.3: Recorded user-confirmed Android development module installation for Unity 6.3 LTS; editor selection remains unresolved.
+- 0.3: Recorded user-confirmed Android development module installation for Unity 6.3 LTS; editor selection remained unresolved.
+- 0.4: Fixed Unity 6.3 LTS (6000.3.26f1) as the project editor.
