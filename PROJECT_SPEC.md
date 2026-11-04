@@ -1,6 +1,6 @@
 # Meta Quest 3 Mixed Reality RC Racing
 Project Specification
-Version: 0.4
+Version: 0.5
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -15,10 +15,13 @@ Create a rapid, playable proof-of-concept mixed reality RC buggy racing experien
 - Vehicle concept: realistic-looking remote-control buggy, not a slot car.
 - Driving: player must be able to steer and control the buggy freely. The vehicle must not be constrained to a rail or fixed path.
 - Prototype priority: quickest practical route to a playable concept demonstration.
+- Initial track surface: tabletop.
 - Unity Editor: Unity 6.3 LTS (6000.3.26f1), installed at `C:\\Program Files\\Unity\\Hub\\Editor\\6000.3.26f1\\Editor\\Unity.exe`.
 - Android Build Support, Android SDK & NDK Tools, and OpenJDK are installed for the selected Unity 6.3 LTS editor, as confirmed by the user.
 
 ### PROPOSED (not yet approved as final implementation details)
+- First test milestone: a minimal passthrough tabletop test area with a simple placeholder buggy using basic Rigidbody movement and steering, targeting an initial Meta Quest 3 build.
+- Retain the existing Mixed Reality template XR foundation; avoid replacing template XR objects or adding packages unless required.
 - Engine and toolchain: Unity.
 - One player-controlled buggy and two AI opponents.
 - A compact off-road circuit positioned in the user's real environment.
@@ -28,14 +31,14 @@ Create a rapid, playable proof-of-concept mixed reality RC buggy racing experien
 - Initial input via Quest controllers/joystick.
 
 ### UNRESOLVED
-- Track placement surface: table or floor.
+- Exact tabletop dimensions, placement/reposition method and buggy scale.
 - Exact controller mapping and driving camera/view.
 - Track dimensions, buggy scale and race format.
 - Whether the first demonstration needs sound, menus, start lights or a reset/reposition interaction.
 - Installation of Android build modules for Unity 6.6 is unconfirmed; this is not required for the selected editor.
 
 ## 3. Scope boundary for first proof of concept
-The first milestone is a simple end-to-end demonstration: enter passthrough, place or position a small track, drive a free-steering buggy, and observe at least one AI vehicle navigating the course. Further features require a logged change and approval.
+The first test milestone is deliberately minimal: enter passthrough, use a small tabletop test area, and drive a simple free-steering placeholder buggy. AI opponents, race features and polish are deferred. Further features require a logged change and approval.
 
 ## 4. Non-goals for the first milestone
 - Finished game polish or store release.
@@ -52,10 +55,8 @@ The first milestone is a simple end-to-end demonstration: enter passthrough, pla
 ## 6. Acceptance criteria for the initial prototype (PROPOSED)
 - Application launches on Meta Quest 3.
 - Passthrough is visible.
-- A virtual track can be positioned in the real environment.
-- The player can accelerate, brake and steer a free-moving buggy.
-- At least one AI buggy can navigate the track.
-- A basic lap or elapsed-time indicator is visible.
+- A tabletop test area can be viewed in passthrough.
+- The player can accelerate, brake and steer a free-moving placeholder buggy.
 
 These criteria remain PROPOSED until the user approves the detailed prototype scope.
 
@@ -67,3 +68,4 @@ All changes must be recorded in CHANGE_REGISTER.md before editing. Version and m
 - 0.2: Recorded installed Unity Editor versions; editor selection and Android build module availability remained unresolved.
 - 0.3: Recorded user-confirmed Android development module installation for Unity 6.3 LTS; editor selection remained unresolved.
 - 0.4: Fixed Unity 6.3 LTS (6000.3.26f1) as the project editor.
+- 0.5: Fixed tabletop as the initial track surface and defined a minimal placeholder-buggy test milestone; detailed dimensions and placement interaction remain unresolved.
