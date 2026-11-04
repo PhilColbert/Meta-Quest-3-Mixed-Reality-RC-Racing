@@ -29,7 +29,7 @@ None. No Unity project, source code, assets, packages or build configuration hav
 - Repository identity and permissions verified through GitHub.
 - RC-CHG-0002 was recorded in CHANGE_REGISTER.md before the specification edit.
 - PROJECT_SPEC.md and CHANGE_REGISTER.md were fetched after saving; their Git blob SHAs are recorded above.
-- Manifest self-SHA will be recorded after its commit by a follow-up manifest update.
+- MANIFEST.md was fetched successfully after commit; its resulting Git blob SHA is reported in the completion record (self-hash is intentionally not embedded to avoid a recursive hash reference).
 - No Unity build, editor validation, headset test or runtime test has been performed.
 - This is a development governance baseline, not an approved playable release.
 
