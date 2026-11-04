@@ -1,6 +1,6 @@
 # Change Register
 Project: Meta Quest 3 Mixed Reality RC Racing
-Version: 0.3
+Version: 0.4
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -32,16 +32,27 @@ Date: 2026-11-04
 - Version transition: 0.1 -> 0.2.
 
 ### RC-CHG-0003
-- Status: LOGGED BEFORE EDIT
+- Status: RECORDED
 - Request: Record the user's confirmation that the Android development modules have been installed for Unity 6.3 LTS (6000.3.26f1).
 - Scope: Update PROJECT_SPEC.md to record Android Build Support, Android SDK & NDK Tools, and OpenJDK as installed for Unity 6.3 LTS, based on user confirmation. Keep Unity Editor selection UNRESOLVED pending explicit confirmation. Update this register and MANIFEST.md to project version 0.3.
 - Explicit exclusions: Do not select an editor on the user's behalf; do not create a Unity project or implementation/source/assets/packages/build configuration.
-- Files in scope: PROJECT_SPEC.md, CHANGE_REGISTER.md, MANIFEST.md.
-- Preserved functions: No application functions exist. Preserve all existing FIXED requirements, proposals, unresolved decisions and scope boundaries.
-- Checks planned: Fetch all three governance files after saving and verify content and Git blob SHAs. No Unity build or headset test is claimed.
+- Files changed: PROJECT_SPEC.md, CHANGE_REGISTER.md, MANIFEST.md.
+- Preserved functions: No application functions exist. All existing FIXED requirements, proposals, unresolved decisions and scope boundaries preserved.
+- Checks: All three governance files fetched after saving and version 0.3 contents verified. No Unity build or headset test performed.
 - Version transition: 0.2 -> 0.3.
+
+### RC-CHG-0004
+- Status: RECORDED
+- Request: User accepted the recommendation to use Unity 6.3 LTS and asked how to do that.
+- Scope: Fix the project editor selection as Unity 6.3 LTS (6000.3.26f1), update the specification, this register and manifest to version 0.4.
+- Explicit exclusions: Do not create the Unity project yet; do not add packages, source code, assets or implementation. Project creation is a separate step after confirming the desired local project folder and template.
+- Files in scope: PROJECT_SPEC.md, CHANGE_REGISTER.md, MANIFEST.md.
+- Preserved functions: No application functions exist. Preserve all previously FIXED requirements and all other proposals/unresolved decisions.
+- Checks planned: Fetch all three governance files after saving and verify the editor selection, change record, version and file SHAs.
+- Version transition: 0.3 -> 0.4.
 
 ## Version history
 - 0.1: Initial project specification, change register and release manifest created. No application source created.
 - 0.2: RC-CHG-0002 records the installed Unity Editor versions.
-- 0.3: RC-CHG-0003 records user-confirmed Android development module installation for Unity 6.3 LTS; editor selection remains unresolved.
+- 0.3: RC-CHG-0003 records user-confirmed Android module installation for Unity 6.3 LTS.
+- 0.4: RC-CHG-0004 fixes Unity 6.3 LTS as the project editor.
