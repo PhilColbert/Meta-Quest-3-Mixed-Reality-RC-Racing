@@ -1,6 +1,6 @@
 # Change Register
 Project: Meta Quest 3 Mixed Reality RC Racing
-Version: 0.9
+Version: 1.0
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -83,6 +83,17 @@ Date: 2026-11-04
 - Preserved functions: Existing Mixed Reality template scene and XR objects untouched; no packages added.
 - Checks: Source file fetched back from GitHub and content length verified (8,351 characters). Code has not been compiled in Unity. No Android build, Quest deployment or runtime test performed.
 - Known limitation: The board is positioned at a fixed offset relative to the headset camera and approximates tabletop height; it does not detect the physical table or support repositioning. Physical alignment and controller input mapping must be tested on device.
+
+
+
+### RC-CHG-0007
+- Status: LOGGED BEFORE USER ACTION
+- Request: Diagnose why the user reported that the script was not visible as a component on XR Origin.
+- Scope: Screenshot inspection shows `Minimal Tabletop Demo (Script)` attached more than once to XR Origin. Remove duplicate copies and retain exactly one enabled component.
+- Files in scope: The local Unity scene only; no source-code edits.
+- Preserved functions: Preserve the existing XR Origin and all template components. Preserve one enabled MinimalTabletopDemo component with its default settings.
+- Checks planned: User confirms one component remains visible in the Inspector and the Console has no red compile errors.
+- Version transition: 0.9 -> 1.0 (cleanup logged; not yet performed).
 
 ## Version history
 - 0.1: Initial governance baseline.
