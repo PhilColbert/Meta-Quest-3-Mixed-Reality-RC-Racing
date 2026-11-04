@@ -1,6 +1,6 @@
 # Change Register
 Project: Meta Quest 3 Mixed Reality RC Racing
-Version: 0.7
+Version: 0.8
 Status: DEVELOPMENT
 Date: 2026-11-04
 
@@ -74,6 +74,9 @@ Date: 2026-11-04
 - Preserved functions: Carry forward all existing Mixed Reality template objects and settings unless a specific incompatibility is found and approved. Preserve FIXED project requirements.
 - Checks planned: Inspect created scripts and scene setup; compile in Unity; attempt Android build and Quest test only when user confirms headset connection and build access. Distinguish any checks not run.
 - Version transition: 0.6 -> 0.7 (change logged; implementation not yet started).
+- Implementation step 1 authorised by user: add one self-contained script at `Assets/Scripts/MinimalTabletopDemo.cs`. It will generate a small tabletop test board, simple primitive buggy and cones at runtime; use Unity XR device input (left primary joystick for steering, right trigger for throttle, left trigger for brake) and Rigidbody movement. It will not modify the existing XR rig, add packages, or create race/AI features.
+- Placement limitation for this first script: place the test board at a fixed offset in front of the headset camera, approximately table height; no plane detection or hand/controller placement is included.
+- User instruction: proceed with the simplest test project.
 
 ## Version history
 - 0.1: Initial governance baseline.
