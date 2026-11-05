@@ -1,6 +1,6 @@
 # Change Register
 Project: Meta Quest 3 Mixed Reality RC Racing
-Version: 1.1
+Version: 1.2
 Status: DEVELOPMENT
 Date: 2026-11-05
 
@@ -111,9 +111,10 @@ Date: 2026-11-05
 - Preserved functions: Android target settings were not changed according to the user workflow; existing Mixed Reality scene/XR objects and MinimalTabletopDemo.cs were left untouched.
 - Tests: No Unity Play-mode launch to headset after the configuration change has yet been confirmed. No compile, Android build, deployment or driving test is claimed. NVIDIA graphics-driver warning is visible in the Link app; no driver change made.
 - Next: Verify Developer Mode on the Quest/mobile app, then decide how to enable passthrough-over-Link or proceed to a standalone Android build.
-- Version transition: Project governance version 1.0 -> 1.1; settings step partially completed, runtime test pending.
+- Version transition: Project governance version 1.1 -> 1.2; settings step partially completed, runtime test pending.
 
 ## Version history
+- 1.2: RC-CHG-0008 settings outcome documented; Standalone OpenXR configuration screenshot-verified, Link passthrough feature access and runtime test pending.
 - 1.1: RC-CHG-0008 recorded; Standalone XR provider settings screenshot-verified; passthrough-over-Link Developer feature access and runtime test pending.
 - 0.1: Initial governance baseline.
 - 0.2: Installed Unity Editor versions recorded.
