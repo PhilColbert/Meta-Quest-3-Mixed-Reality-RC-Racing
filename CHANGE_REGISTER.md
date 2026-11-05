@@ -98,18 +98,23 @@ Date: 2026-11-05
 - Version transition: 0.9 -> 1.0.
 
 ### RC-CHG-0008
-- Status: LOGGED BEFORE ACTION
-- Request: Configure Unity Editor Play mode to use the connected Meta Quest 3 through Meta Quest Link, because pressing Play currently displays the Mixed Reality template welcome panel in the Unity Game view but not in the headset.
+- Status: PARTIALLY COMPLETED - UNITY SETTINGS SCREENSHOT VERIFIED
+- Request: Configure Unity Editor Play mode to use the connected Meta Quest 3 through Meta Quest Link, because pressing Play initially displayed the Mixed Reality template welcome panel in the Unity Game view but not in the headset.
 - Baseline evidence: User screenshot of Edit > Project Settings > XR Plug-in Management dated 2026-11-05. The visible provider list shows OpenXR unchecked, XR Simulation checked, Mock HMD unchecked, and Initialize XR on Startup checked. The selected platform appears to be Standalone; platform selection should be confirmed from the current Unity settings window before changing anything.
 - Scope: For the Standalone target only, disable XR Simulation and enable OpenXR if the current panel confirms Standalone is selected. Then inspect Standalone OpenXR settings and configure only required Quest Link items if available. Confirm Meta Quest Link is connected before the Editor Play test.
 - Explicit exclusions: Do not change Android target settings, build profile, Mixed Reality template scene/XR objects, input actions, MinimalTabletopDemo.cs, packages, rendering settings, or other Player/Project settings. Do not install or upgrade packages as part of this change without separate approval.
 - Files/configuration in scope: Local Unity XR Plug-in Management settings for Standalone only. Exact local settings file path(s) to be recorded only if the changed settings are visible and verified. Governance record files are maintained in this repository.
 - Preserved functions: Preserve Android-target XR configuration and all existing template XR functionality. Preserve MinimalTabletopDemo.cs byte-for-byte.
-- Checks planned: Verify Standalone is selected before editing; inspect available OpenXR settings and feature list; confirm settings visually after change; test Play mode in Quest Link only after settings are confirmed. No Android build or device build is included.
-- Tests before action: The current screenshot has been inspected. No Unity setting has yet been changed; no compilation, build, deployment or headset runtime test is claimed.
-- Version transition: Project governance version 1.0 -> 1.1 for this logged change; implementation outcome pending.
+- Checks/results: Screenshot confirms Standalone selected; OpenXR enabled; Meta Quest feature group enabled; Initialize XR on Startup enabled; XR Simulation disabled; Mock HMD disabled. A subsequent OpenXR settings screenshot shows Oculus Touch Controller Profile and Meta Quest Touch Plus Controller Profile listed. Meta Horizon Link General settings screenshot shows OpenXR runtime action greyed out, consistent with Meta Horizon Link already being the active runtime. User reports Link is connected.
+- Additional finding: Meta Horizon Link Settings screenshot visibly contains only Account and General tabs; no Developer or Beta tab is present. Current Meta Unity Link documentation directs users to Settings > Developer for Developer Runtime Features and Passthrough over Meta Horizon Link, and lists a Meta Developer account as a prerequisite. This part remains unresolved pending confirmation of headset Developer Mode/account status and the actual available app settings.
+- Files/configuration: User changed local Unity Standalone XR Plug-in Management settings. Exact local settings file path and checksum have not been inspected. No Git source files or script were changed by these Unity settings actions.
+- Preserved functions: Android target settings were not changed according to the user workflow; existing Mixed Reality scene/XR objects and MinimalTabletopDemo.cs were left untouched.
+- Tests: No Unity Play-mode launch to headset after the configuration change has yet been confirmed. No compile, Android build, deployment or driving test is claimed. NVIDIA graphics-driver warning is visible in the Link app; no driver change made.
+- Next: Verify Developer Mode on the Quest/mobile app, then decide how to enable passthrough-over-Link or proceed to a standalone Android build.
+- Version transition: Project governance version 1.0 -> 1.1; settings step partially completed, runtime test pending.
 
 ## Version history
+- 1.1: RC-CHG-0008 recorded; Standalone XR provider settings screenshot-verified; passthrough-over-Link Developer feature access and runtime test pending.
 - 0.1: Initial governance baseline.
 - 0.2: Installed Unity Editor versions recorded.
 - 0.3: Android modules confirmed for Unity 6.3 LTS.
