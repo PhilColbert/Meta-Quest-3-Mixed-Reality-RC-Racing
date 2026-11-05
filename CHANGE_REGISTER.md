@@ -1,8 +1,8 @@
 # Change Register
 Project: Meta Quest 3 Mixed Reality RC Racing
-Version: 1.0
+Version: 1.1
 Status: DEVELOPMENT
-Date: 2026-11-04
+Date: 2026-11-05
 
 ## Change records
 
@@ -96,6 +96,18 @@ Date: 2026-11-04
 - Tests: Unity compilation, Android build, Quest deployment and runtime driving remain untested. Console status not shown in this screenshot.
 - Issues: None observed in the Inspector. Compile status remains unverified.
 - Version transition: 0.9 -> 1.0.
+
+### RC-CHG-0008
+- Status: LOGGED BEFORE ACTION
+- Request: Configure Unity Editor Play mode to use the connected Meta Quest 3 through Meta Quest Link, because pressing Play currently displays the Mixed Reality template welcome panel in the Unity Game view but not in the headset.
+- Baseline evidence: User screenshot of Edit > Project Settings > XR Plug-in Management dated 2026-11-05. The visible provider list shows OpenXR unchecked, XR Simulation checked, Mock HMD unchecked, and Initialize XR on Startup checked. The selected platform appears to be Standalone; platform selection should be confirmed from the current Unity settings window before changing anything.
+- Scope: For the Standalone target only, disable XR Simulation and enable OpenXR if the current panel confirms Standalone is selected. Then inspect Standalone OpenXR settings and configure only required Quest Link items if available. Confirm Meta Quest Link is connected before the Editor Play test.
+- Explicit exclusions: Do not change Android target settings, build profile, Mixed Reality template scene/XR objects, input actions, MinimalTabletopDemo.cs, packages, rendering settings, or other Player/Project settings. Do not install or upgrade packages as part of this change without separate approval.
+- Files/configuration in scope: Local Unity XR Plug-in Management settings for Standalone only. Exact local settings file path(s) to be recorded only if the changed settings are visible and verified. Governance record files are maintained in this repository.
+- Preserved functions: Preserve Android-target XR configuration and all existing template XR functionality. Preserve MinimalTabletopDemo.cs byte-for-byte.
+- Checks planned: Verify Standalone is selected before editing; inspect available OpenXR settings and feature list; confirm settings visually after change; test Play mode in Quest Link only after settings are confirmed. No Android build or device build is included.
+- Tests before action: The current screenshot has been inspected. No Unity setting has yet been changed; no compilation, build, deployment or headset runtime test is claimed.
+- Version transition: Project governance version 1.0 -> 1.1 for this logged change; implementation outcome pending.
 
 ## Version history
 - 0.1: Initial governance baseline.
